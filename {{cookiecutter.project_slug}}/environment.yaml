@@ -1,0 +1,6 @@
+channel:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python={{cookiecutter.python_version}}
+  - snakemake={{cookiecutter.snakemake_version}}

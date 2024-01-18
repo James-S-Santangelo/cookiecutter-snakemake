@@ -1,0 +1,7 @@
+{
+  "project_name": "Cookiecutter Snakemake",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "author": "James S. Santangelo",
+  "snakemake_version": "8.2.0",
+  "python_version": "3.10"
+}
