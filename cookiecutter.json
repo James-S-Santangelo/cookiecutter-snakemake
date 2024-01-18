@@ -3,5 +3,9 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "author": "James S. Santangelo",
   "snakemake_version": "8.2.0",
-  "python_version": "3.10"
+  "python_version": "3.10",
+  "results_dir": "/space/s1/santang3/{{cookiecutter.project_slug}}",
+  "slurm_account": "fc_popgen",
+  "slurm_partition": "savio4_htc",
+  "apptainer_args": "/global"
 }

@@ -1,0 +1,5 @@
+# Input files
+
+
+# Output
+results_prefix: {{cookiecutter.results_dir}}/results
