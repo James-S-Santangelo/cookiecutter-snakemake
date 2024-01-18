@@ -27,4 +27,4 @@ conda-frontend: mamba
 conda-cleanup-pkgs: cache
 software-deployment-method: conda apptainer
 cleanup-containers: True
-apptainer-args: "--bind {{cookicutter.apptainer_args}}"
+apptainer-args: "--bind {{cookiecutter.apptainer_args}}"
