@@ -1,30 +1,14 @@
-cluster:
-  mkdir -p {{cookiecutter.results_dir}}/{rule} &&
-  sbatch
-    --parsable
-    --account={{cookiecutter.slurm_account}}
-    --partition={resources.partition}
-    --cpus-per-task={threads}
-    --time={resources.time}
-    --job-name=smk-{rule}-{wildcards}
-    --output={{cookiecutter.results_dir}}/{rule}/{rule}_{wildcards}.out
+__use_yte__: true
+executor: slurm
 default-resources:
-  - partition={{cookiecutter.slurm_partition}}
-  - time="01:00:00"
-cluster-status: status-sacct.sh
-cluster-cancel: scancel
-restart-times: 2
-max-jobs-per-second: 2
-max-status-checks-per-second: 1
-local-cores: 1
+  - mem_mb=4000
+  - runtime=60
+  - slurm_account={{cookiecutter.slurm_account}}
 latency-wait: 60
 jobs: 300
-keep-going: True
-rerun-incomplete: True
-printshellcmds: True
+retries: 1
+local-cores: 1
 scheduler: greedy
-conda-frontend: mamba
-conda-cleanup-pkgs: cache
-software-deployment-method: conda apptainer
-cleanup-containers: True
+max-jobs-per-second: 1
+max-status-checks-per-second: 1
 apptainer-args: "--bind {{cookiecutter.apptainer_args}}"
