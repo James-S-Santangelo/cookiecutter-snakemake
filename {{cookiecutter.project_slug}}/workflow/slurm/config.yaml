@@ -11,4 +11,3 @@ local-cores: 1
 scheduler: greedy
 max-jobs-per-second: 1
 max-status-checks-per-second: 1
-apptainer-args: "--bind {{cookiecutter.apptainer_args}}"
